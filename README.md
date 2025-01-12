@@ -56,3 +56,13 @@ chmod +x setup.sh
 ```
 
 - If you encounter any port conflicts, ensure that no other services are using the required ports (e.g., 3306 for MySQL, 8080 for the backend, 5173 for the frontend).
+  ```bash
+  Error response from daemon: Ports are not available: exposing port ................
+  ```
+
+  Check the port and if there is conflicts and okay to kill the process then, run this code. (If not change the port number)
+  ```bash
+  sudo lsof -i :3306
+  sudo kill -15 [PID]
+  ```
+  
